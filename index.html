@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vintage Cafe Guide</title>
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- 손글씨 느낌: Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=SUITE:wght@400;600;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand__mark" aria-hidden="true">✦</div>
+            <div>
+                <h1 class="brand__title">Vintage Cafe Guide</h1>
+                <p class="brand__subtitle">빈티지 · 앤틱 · 감성 카페 10곳 추천</p>
+            </div>
+        </div>
+
+        <div class="district">
+            <label class="district__label" for="districtSelect">지역구 선택</label>
+            <select id="districtSelect" class="district__select">
+                <!-- JS로 옵션 채움 -->
+            </select>
+        </div>
+    </header>
+
+    <main class="layout">
+        <!-- 왼쪽: 추천 리스트 -->
+        <section class="panel">
+            <div class="panel__header">
+                <h2 class="panel__title">추천 카페 10</h2>
+                <p class="panel__desc">카드를 눌러 상세 정보를 확인해줘.</p>
+            </div>
+
+            <div id="cafeGrid" class="grid" aria-live="polite">
+                <!-- JS로 카드 채움 -->
+            </div>
+        </section>
+
+        <!-- 오른쪽: 상세 -->
+        <section class="panel panel--detail">
+            <div class="panel__header">
+                <h2 class="panel__title">카페 상세</h2>
+                <p class="panel__desc">리스트에서 카페를 선택하면 여기에서 보여줘.</p>
+            </div>
+
+            <article id="detail" class="detail">
+                <div class="detail__empty">
+                    <div class="stamp">SELECT</div>
+                    <p>왼쪽에서 카페를 선택해줘.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Vintage Cafe Guide · 정적 웹사이트 예시</p>
+    </footer>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
